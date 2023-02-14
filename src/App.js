@@ -8,6 +8,7 @@ import List from './pages/list/List';
 import Hotel from './pages/hotel/Hotel';
 import Home from './pages/home/Home';
 
+
 const App = () => {
   return (
     <BrowserRouter>

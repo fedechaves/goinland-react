@@ -1,11 +1,10 @@
-import React from "react";
 import "./navBar.css";
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-        <span className="logo">asuncion tourism</span>
+        <span className="logo">Asuntour</span>
         <div className="navItems">
           <button className="navButton">register</button>
           <button className="navButton">login</button>
