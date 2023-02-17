@@ -39,6 +39,15 @@ const Header = () => {
               <span>Airport taxis</span>
           </div>
 
+          <div className="headerListItem">
+              <FontAwesomeIcon icon={faTaxi} />
+              <span>Airport taxis</span>
+          </div>
+
+          <div className="headerListItem">
+              <FontAwesomeIcon icon={faTaxi} />
+              <span>Airport taxis</span>
+          </div>
         </div>
         <h1 className="headerTitle">A lifetime of discounts? is Genius.</h1>
         <p className="headerDesc">
