@@ -7,6 +7,7 @@ const List = () => {
     <div>
         <NavBar/>
         <Header type="list"/>
+        <div className="homeContainer"></div>
     </div>
   )
 }

@@ -73,7 +73,9 @@ const Header = ({ type }) => {
               <span>Airport taxis</span>
           </div>
         </div>
-        { type !== "list" && <> <h1 className="headerTitle">A lifetime of discounts? is Genius.</h1>
+        { type !== "list" && 
+        <> 
+        <h1 className="headerTitle">A lifetime of discounts? is Genius.</h1>
         <p className="headerDesc">
           Get rewarded for your travels - unlock instant savings of 10% or more
           with a free Asuntour account.
