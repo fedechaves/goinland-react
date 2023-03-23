@@ -11,8 +11,9 @@ import {
   faCircleXmark,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import useFetch from "../../hooks/useFetch";
+import { SearchContext } from "../../context/searchContext";
 
 const Hotel = () => {
   const location = useLocation();
@@ -21,6 +22,17 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
 
   const { data, loading, reFetch, error } = useFetch(`http://localhost:2121/api/hotels/find/${id}`);
+
+  const {dates, options} = useContext(SearchContext);
+
+  const MILLISECONDS_PER_DAY = 1000 * 60 *60 *24;
+  function dayDifference(date1, date2) {
+    const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
+    return diffDays
+  }
+
+  const days = dayDifference(dates[0].endDate, dates[0].startDate)
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -105,7 +117,7 @@ const Hotel = () => {
                 excellent location score of 9.8!
               </span>
               <h2>
-                <b>$945</b> (9 nights)
+                <b>${data.cheapestPrice * days * options.room}</b> ({days} nights)
               </h2>
               <button>Reserve or Book Now!</button>
             </div>

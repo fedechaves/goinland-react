@@ -3,7 +3,6 @@ import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
   const { data, loading, error } = useFetch("http://localhost:2121/api/hotels?featured=true&limit=3");
-  console.log(data)
 
   return (
     <div className="fp">
